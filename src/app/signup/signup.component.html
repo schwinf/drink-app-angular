@@ -1,0 +1,47 @@
+<div class="frame">
+  <div class="login-container">
+    <div>
+      <img class="logo" src="assets/images/drink_logo.svg">
+      <div>
+        <form novalidate
+              (ngSubmit)="signUp()"
+              [formGroup]="signupForm">
+          <div>
+            <mat-form-field hideRequiredMarker>
+              <input matInput placeholder="Name" 
+                     class="form-control" 
+                     required 
+                     formControlName="name"
+                     />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field hideRequiredMarker>
+              <input matInput placeholder="Email" 
+                      class="form-control" 
+                      email
+                      required 
+                      Validators.email
+                      formControlName="email"
+                      />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field hideRequiredMarker>
+              <input matInput type="password" 
+                     placeholder="Password" 
+                     class="form-control" 
+                     
+                     required 
+                     formControlName="password">
+            </mat-form-field>
+          </div>
+          <div>
+            <button type="submit" class="login-button" mat-raised-button color="primary" [disabled]="signupForm.invalid">Sign Up</button>
+          </div>
+        </form>
+        <br><span class="login">Already have an account? <a routerLink="/login" class="login-bold">Login Here</a></span>
+      </div>
+    </div>
+  </div>
+</div>

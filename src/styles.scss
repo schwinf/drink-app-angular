@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+    
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background: #2193b0 no-repeat center center fixed;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0) no-repeat center center fixed;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #6dd5ed, #2193b0) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}

@@ -1,0 +1,46 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <div>
+        <mat-toolbar><span id="greeting">Hi Frank</span><mat-icon (click)="drawer.toggle()">menu</mat-icon></mat-toolbar>
+      </div>
+      <div class="card-container">
+        <div class="goal-container">
+          <mat-card class="goal-card">
+            <mat-card-header>
+                <mat-card-title>Your Daily Goal</mat-card-title>
+                <mat-card-subtitle>Drink Up!</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="water-container">
+                  <div class="goal-percent">60%</div>
+                  <button mat-fab class="add-button" (click)="openDialog()"><mat-icon class="add-icon">add</mat-icon></button>
+                </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="results-container">
+          <mat-card class="results-card">
+            <mat-card-header>
+              <mat-card-title>Your Weekly Results</mat-card-title>
+              <mat-card-subtitle>How are you doing?</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div *ngIf="chart">
+                  <canvas id="canvas">{{ chart }}</canvas>
+                </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-container>
+
+
